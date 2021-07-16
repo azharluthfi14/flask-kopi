@@ -1,0 +1,162 @@
+body
+{
+    background-color: #111827;
+}
+
+.navbar
+{
+    padding: 1rem;
+    background-color: #18212f;
+}
+
+.navbar .navbar-brand {
+    color: #dbc174;
+}
+
+.navbar .navbar-brand:hover {
+    color:#e6c261;
+}
+
+.nav-item .nav-link {
+    font-weight: 500;
+    text-decoration: none;
+    padding: .7rem 1rem;
+    margin: 0 .5rem;
+    border-radius: .5rem;
+    transition: background .2s ease-in-out;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+.nav-item .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffe08a;
+}
+
+.nav-item .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffe08a;
+    font-weight: 700;
+}
+
+.jumbotron
+{
+    background-image: url('/static/img/1.jpg');
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+    z-index: -1;
+
+}
+
+.btn {
+    padding: .5rem 2rem;
+    outline: 0;
+    border: 0;
+}
+
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.btn-indigo {
+    background-color: #ffe08a;
+    color: #4c4329;
+    font-weight: bold;
+}
+
+.btn-indigo:hover {
+    background-color: #e6c261;
+    color: #ffffff;
+}
+
+.form-control {
+    border: 2px solid #293344;
+    background-color: #222b3a;
+    color: #ffffff;
+}
+
+.form-control:focus {
+    background: #222b3a !important;
+    border-color: #ffe08a !important;
+    box-shadow: 0 0 2px #ffe08a !important;
+    color: #ffffff;
+}
+
+.form-label
+{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.table
+{
+    color: #ffffff;
+    background-color: #293344;
+    border-radius: .5rem;
+}
+
+table thead
+{
+    border-radius: .5rem !important;
+    background-color: #1f2937;
+    border-top: none;
+}
+
+.table thead th,
+.table td
+{
+    border: none;
+}
+
+.quality
+{
+    color: #ffe08a;
+}
+
+.card
+{
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #18212f;
+}
+
+
+.heading-form
+{
+    padding: 10px 20px;
+    background-color: #1f2937;
+    width: fit-content;
+    border-radius: 1rem;
+    color: #dbc174;
+    margin-bottom: 30px;
+}
+
+.hero 
+{
+    padding: 10rem 0;
+    z-index: 1;
+}
+
+.hero h1
+{
+    font-size: 5rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.hero p
+{
+    color: #ffe08a;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.hero span
+{
+    color: #e6c261;
+}

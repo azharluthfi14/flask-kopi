@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block title%}
+Classification
+{% endblock title %}
+{% block content %}
+<div class="container my-3">
+    <div class="heading-form">
+        <h3>Coffee quality classification</h3>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <div class="card-title mb-3">
+                        <h5 class="text-white">Variables Classification</h5>
+                    </div>
+                    <form method="POST" action="{{ url_for('coffee.data') }}" id="post-form">
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-4">
+                                    <label class="form-label">Aroma</label>
+                                    <input required step='0.1' type="number" id="aroma" name="aroma"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-4">
+                                    <label class="form-label">Flavor</label>
+                                    <input required step='0.1' type="number" id="flavor" name="flavor"
+                                        class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-4">
+                                    <label class="form-label">Aftertaste</label>
+                                    <input required step='0.1' type="number" id="aftertaste" name="aftertaste"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-4">
+                                    <label class="form-label">Acidity</label>
+                                    <input required step='0.1' type="number" id="acidity" name="acidity"
+                                        class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-4">
+                                    <label class="form-label">Body</label>
+                                    <input required step='0.1' type="number" id="body" name="body" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-4">
+                                    <label class="form-label">Balance</label>
+                                    <input required step='0.1' type="number" id="balance" name="balance"
+                                        class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <button id="process" type="submit" class="btn btn-indigo btn-block">Result</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="form-card">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">Aroma</th>
+                            <th scope="col" class="text-center">Flavor</th>
+                            <th scope="col" class="text-center">Aftertaste</th>
+                            <th scope="col" class="text-center">Acidity</th>
+                            <th scope="col" class="text-center">Body</th>
+                            <th scope="col" class="text-center">Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">{{ aroma }}</td>
+                            <td class="text-center">{{ flavor }}</td>
+                            <td class="text-center">{{ aftertaste }}</td>
+                            <td class="text-center">{{ acidity }}</td>
+                            <td class="text-center">{{ body }}</td>
+                            <td class="text-center">{{ balance }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="fw-bold text-white">Quality : <span class="quality">{{ coffe_class }}</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
